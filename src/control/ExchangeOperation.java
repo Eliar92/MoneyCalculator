@@ -15,6 +15,7 @@ public class ExchangeOperation {
     public ExchangeOperation() {
     }
     
+   
     public void execute(CurrencySet currencySet){
         ExchangeDialog exchangeDialog=new ExchangeDialog(currencySet);
         Exchange exchange;
