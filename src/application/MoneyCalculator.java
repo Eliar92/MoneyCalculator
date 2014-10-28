@@ -11,8 +11,8 @@ public class MoneyCalculator {
         CurrencySetLoader currencySetLoader=new CurrencySetLoader();
         CurrencySet currencySet;
         currencySet=currencySetLoader.load(null);
-        ExchangeOperation operation=new ExchangeOperation();
-        operation.execute(currencySet);
+        ExchangeOperation operation=new ExchangeOperation(currencySet);
+        operation.execute();
     }
     
 }
