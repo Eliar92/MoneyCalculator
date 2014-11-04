@@ -5,10 +5,20 @@
  */
 package userinterface;
 
+import model.Money;
+
 /**
  *
  * @author usuario
  */
-public class MoneyDisplay {
+public class MoneyDisplay{
+    private final Money money;
+
+    public MoneyDisplay(Money money) {
+        this.money = money;
+    }
+    public void displayMoney(){
+        System.out.println(money.getAmount()+money.getCurrency().getName());
+    }
     
 }

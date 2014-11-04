@@ -2,8 +2,6 @@
 package control;
 
 import model.CurrencySet;
-import model.Exchange;
-import model.Money;
 import persistency.ExchangeRateLoader;
 import process.Exchanger;
 import userinterface.ExchangeDialog;
@@ -11,20 +9,16 @@ import userinterface.MoneyDisplay;
 
 
 public class ExchangeOperation {
-
-    public ExchangeOperation() {
+    CurrencySet currencySet;
+    public ExchangeOperation(CurrencySet currencySet) {
+        this.currencySet=currencySet;
     }
     
    
-    public void execute(CurrencySet currencySet){
+    public void execute(){
         ExchangeDialog exchangeDialog=new ExchangeDialog(currencySet);
-        Exchange exchange;
-        exchange=exchangeDialog.execute();
-        Money money=new Money(200,null);
-        ExchangeRateLoader rateLoader=new ExchangeRateLoader(exchange,money);
-        rateLoader.load();
-        Exchanger exchanger=new Exchanger();
-        exchanger.exchange();
-        MoneyDisplay moneydisplay=new MoneyDisplay();
+        ExchangeRateLoader rateLoader=new ExchangeRateLoader(exchangeDialog.getExchange(),currencySet);
+        Exchanger exchanger=new Exchanger(rateLoader.load());
+        MoneyDisplay moneydisplay=new MoneyDisplay(exchanger.exchange());
     }
 }

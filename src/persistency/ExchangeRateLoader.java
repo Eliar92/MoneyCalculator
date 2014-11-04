@@ -5,21 +5,24 @@
  */
 package persistency;
 
+import model.CurrencySet;
 import model.Exchange;
-import model.Money;
+import model.ExchangeRate;
 
 /**
  *
  * @author usuario
  */
 public class ExchangeRateLoader {
-
-    public ExchangeRateLoader(Exchange exchange, Money money) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private final Exchange exchange;
+    private final CurrencySet currencySet;
+    public ExchangeRateLoader(Exchange exchange, CurrencySet currencySet) {
+        this.exchange=exchange;
+        this.currencySet=currencySet;
     }
 
-    public void load() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ExchangeRate load() {
+        return new ExchangeRate(exchange.getCurrency(),currencySet.getCurrency("USA"),exchange.getMoney().getAmount(), (float) 0.8);
     }
     
 }

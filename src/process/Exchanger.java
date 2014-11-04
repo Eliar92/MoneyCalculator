@@ -1,9 +1,16 @@
 package process;
 
-public class Exchanger {
+import model.ExchangeRate;
+import model.Money;
 
-    public void exchange(/* Exchange rate y money*/) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public class Exchanger {
+    private final ExchangeRate exchangeRate;
+
+    public Exchanger(ExchangeRate exchangeRate) {
+        this.exchangeRate = exchangeRate;
+    }
+    public Money exchange() {
+        return new Money(exchangeRate.getValue()*exchangeRate.getRate(),exchangeRate.getOut());
     }
     
 }
