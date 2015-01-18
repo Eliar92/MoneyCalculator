@@ -23,4 +23,8 @@ public class Currency {
     public int getCode() {
         return code;
     }
+    public String toString(){
+        return name;
+    }
+    
 }

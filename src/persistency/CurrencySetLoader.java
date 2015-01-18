@@ -8,14 +8,8 @@ public class CurrencySetLoader {
     private final HashMap<String,Currency> currencySet;
 
     public CurrencySetLoader() {
-        currencySet=null;
+        currencySet= new HashMap<>();
     }
-
-
-
-    
-
-
     public CurrencySet load(){
         currencySet.put("EUR",new Currency("Euro","EUR",1));
         currencySet.put("USA",new Currency("Dolar","USA",2));
