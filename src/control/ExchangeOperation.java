@@ -4,14 +4,14 @@ package control;
 import model.CurrencySet;
 import persistency.ExchangeRateLoader;
 import process.Exchanger;
-import Swing.ExchangeDialog;
-import Swing.MoneyDisplay;
+import userinterface.Swing.ExchangeDialog;
+import userinterface.Swing.MoneyDisplay;
 
 
 public class ExchangeOperation {
     CurrencySet currencySet;
-    private MoneyDisplay moneyDisplay;
-    private ExchangeDialog exchangeDialog;
+    private final MoneyDisplay moneyDisplay;
+    private final ExchangeDialog exchangeDialog;
 
     public ExchangeOperation(CurrencySet currencySet, MoneyDisplay moneyDisplay, ExchangeDialog exchangeDialog) {
         this.currencySet = currencySet;

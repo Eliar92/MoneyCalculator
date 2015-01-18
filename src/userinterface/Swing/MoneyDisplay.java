@@ -1,4 +1,4 @@
-package Swing;
+package userinterface.Swing;
 
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;

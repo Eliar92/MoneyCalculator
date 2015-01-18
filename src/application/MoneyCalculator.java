@@ -1,7 +1,7 @@
 
 package application;
 
-import Swing.Frame;
+import userinterface.Swing.Frame;
 import control.ExchangeOperation;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

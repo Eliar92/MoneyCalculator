@@ -1,4 +1,4 @@
-package Swing;
+package userinterface.Swing;
 
 import java.awt.BorderLayout;
 import java.awt.Component;

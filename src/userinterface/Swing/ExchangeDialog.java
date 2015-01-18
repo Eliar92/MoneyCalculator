@@ -1,4 +1,4 @@
-package Swing;
+package userinterface.Swing;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import javax.swing.BorderFactory;
